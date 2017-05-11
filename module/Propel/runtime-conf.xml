@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <propel>
+        <datasources default="quinela">
+            <datasource id="quinela">
+                <adapter>mysql</adapter> <!-- sqlite, mysql, myssql, oracle, or pgsql -->
+                <connection>
+                    <dsn>mysql:host=localhost;dbname=oneclick_quinela</dsn>
+                    <user>oneclick_quinela</user>
+                    <password>M4kam4ka1490!</password>
+                </connection>
+            </datasource>
+        </datasources>
+    </propel>
+</config>
