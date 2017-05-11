@@ -14,6 +14,15 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
+    
+    public function participantesAction(){
+        
+        $participantes = \ParticipanteQuery::create()->find();
+        
+        return new ViewModel(array(
+            'participantes' => $participantes
+        ));
+    }
     public function seleccionAction(){
         $request = $this->getRequest();
          if($request->isPost()){
@@ -52,7 +61,9 @@ class IndexController extends AbstractActionController
         $request = $this->getRequest();
         
         $lugares_disponibles = 8 - \ParticipanteQuery::create()->find()->count();
-        
+        if($lugares_disponibles == 0){
+            return $this->redirect()->toUrl('/participantes');
+        }
        
         
      

@@ -1,0 +1,29 @@
+<div class="row">
+    <h1>Participantes</h1>
+    <div class="col-md-6">
+        <table class="table table-bordered">
+            <thead>
+            <th>Participante</th>
+            <th>Equipo</th>
+            <th>Estatus</th>
+            </thead>
+            <tbody>
+                <?php $participante = new Participante()?>
+                <?php foreach($participantes as $participante) :?>
+                <?php 
+                    $estatus = 'http://www.clker.com/cliparts/u/g/F/R/X/9/green-circle-hi.png';
+                    if(!$participante->getParticipanteEstatus()){
+                        $estatus = 'http://www.clker.com/cliparts/l/J/f/f/K/O/red-circle-no-background.svg.hi.png';
+                    }
+                
+                ?>
+                <tr>
+                    <td style="vertical-align: central"><?php echo $participante->getParticipanteNombre()?></td>
+                    <td style="text-align: center"><img style="width: 50px; "src="<?php echo $participante->getEquipo()->getEquipoImg()?>"></td>
+                    <td style="text-align: center"><img style="width: 50px; "src="<?php echo $estatus?>"></td>
+                </tr>
+                <?php endforeach;?>
+            </tbody>
+        </table>
+    </div>
+</div>
