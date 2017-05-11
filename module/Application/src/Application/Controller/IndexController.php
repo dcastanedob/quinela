@@ -28,7 +28,7 @@ class IndexController extends AbstractActionController
             $equipo = \EquipoQuery::create()->filterByEquipoNombre($equipo_nombre)->findOne();
             
             $particiapente = new \Participante;
-            $particiapente->setParticipanteNombre($post_data['nombre'])
+            $particiapente->setParticipanteNombre(strtoupper($post_data['nombre']))
                           ->setParticipanteEstatus(1)
                           ->setIdequipo($equipo->getIdequipo())
                           ->save();
