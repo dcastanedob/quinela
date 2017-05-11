@@ -11,7 +11,7 @@ $conf = array (
       array (
         'dsn' => 'mysql:host=localhost;dbname=oneclick_quinela',
         'user' => 'oneclick_quinela',
-        'password' => 'M4kam4ka1490!',
+        'password' => 'M4kam4ka1490',
       ),
     ),
     'default' => 'quinela',

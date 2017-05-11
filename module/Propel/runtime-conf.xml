@@ -7,7 +7,7 @@
                 <connection>
                     <dsn>mysql:host=localhost;dbname=oneclick_quinela</dsn>
                     <user>oneclick_quinela</user>
-                    <password>M4kam4ka1490!</password>
+                    <password>M4kam4ka1490</password>
                 </connection>
             </datasource>
         </datasources>
