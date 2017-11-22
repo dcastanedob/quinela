@@ -30,7 +30,7 @@ return array(
                     ),
                 ),
             ),
-            'seleccion' => array(
+            'participantes' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
                     'route'    => '/participantes',
